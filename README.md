@@ -5,11 +5,9 @@
 ![Android](https://img.shields.io/badge/Android-11%2B-success)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
-# AAPT2-Termux
+Native ARM64 build of **Android Asset Packaging Tool 2 (AAPT2)** compiled entirely on **Termux**.
 
-Native ARM64 build of Android Asset Packaging Tool 2 (AAPT2) compiled entirely on Termux.
-
-This project provides a standalone ARM64 AAPT2 binary built natively on Android using the Termux environment.
+This project provides a standalone ARM64 AAPT2 binary built natively on Android without requiring x86 emulation.
 
 ---
 
@@ -26,20 +24,20 @@ This project provides a standalone ARM64 AAPT2 binary built natively on Android 
 
 ## Supported Commands
 
-- compile
-- link
-- dump
-- optimize
-- convert
-- apkinfo
-- daemon
-- version
+- `compile`
+- `link`
+- `dump`
+- `optimize`
+- `convert`
+- `apkinfo`
+- `daemon`
+- `version`
 
 ---
 
 ## Requirements
 
-- Android 11+
+- Android 11 or newer
 - ARM64 device
 - Termux
 - Clang
@@ -50,27 +48,27 @@ This project provides a standalone ARM64 AAPT2 binary built natively on Android 
 
 ## Installation
 
-Download the latest release from the Releases page.
+Download the latest binary from the **Releases** page.
 
-Make the binary executable.
+### 1. Make the binary executable
 
 ```sh
 chmod +x aapt2-termux-arm64
 ```
 
-Install it into Termux.
+### 2. Install into Termux
 
 ```sh
 mv aapt2-termux-arm64 $PREFIX/bin/aapt2-termux
 ```
 
-Verify the installation.
+### 3. Verify installation
 
 ```sh
 aapt2-termux version
 ```
 
-Expected output.
+Expected output:
 
 ```text
 Android Asset Packaging Tool (aapt) 2.19-termux
@@ -80,13 +78,13 @@ Android Asset Packaging Tool (aapt) 2.19-termux
 
 ## Usage
 
-Show version.
+### Show version
 
 ```sh
 aapt2-termux version
 ```
 
-Compile resources.
+### Compile resources
 
 ```sh
 aapt2-termux compile \
@@ -94,7 +92,17 @@ aapt2-termux compile \
     -o compiled
 ```
 
-Dump AndroidManifest.
+### Link compiled resources
+
+```sh
+aapt2-termux link \
+    -I android.jar \
+    --manifest AndroidManifest.xml \
+    -o output.apk \
+    compiled/*.flat
+```
+
+### Dump AndroidManifest
 
 ```sh
 aapt2-termux dump xmltree \
@@ -102,13 +110,13 @@ aapt2-termux dump xmltree \
     app.apk
 ```
 
-Dump package information.
+### Dump package information
 
 ```sh
 aapt2-termux dump badging app.apk
 ```
 
-Dump resources.
+### Dump resources
 
 ```sh
 aapt2-termux dump resources app.apk
@@ -137,7 +145,7 @@ Build AAPT2.
 ./build.sh
 ```
 
-The binary will be generated at:
+The resulting binary will be located at:
 
 ```text
 build/aapt2
@@ -147,17 +155,17 @@ build/aapt2
 
 ## Tested
 
-Successfully tested on:
+Verified on the following environment:
 
 - Android 15
 - ARM64
 - Termux
 - APKTool 2.11.x
 - APK decompile/rebuild workflow
-- APK signing using apksigner
+- APK signing using `apksigner`
 - Resource compilation
 - Resource linking
-- Manifest parsing
+- AndroidManifest parsing
 - Resource dumping
 
 ---
@@ -168,21 +176,22 @@ Current release:
 
 **v1.0-termux**
 
-Binary:
+Included binary:
 
-- aapt2-termux-arm64
+- `aapt2-termux-arm64`
 
 ---
 
 ## License
 
-MIT License
+This project is licensed under the **MIT License**.
+
+See the [LICENSE](LICENSE) file for details.
 
 ---
 
 ## Author
 
-Arii
+**Arii**
 
-GitHub:
-https://github.com/arriRgb31
+GitHub: https://github.com/arriRgb31
