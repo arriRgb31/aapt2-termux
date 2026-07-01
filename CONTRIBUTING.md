@@ -1,10 +1,11 @@
 # Contributing
 
-Contributions are welcome.
+Thank you for your interest in contributing.
 
-Please:
+Please follow these guidelines:
 
-- Open an Issue first.
-- Keep changes focused.
-- Test on Termux ARM64.
-- Submit a Pull Request.
+- Open an Issue before making major changes.
+- Keep pull requests focused on a single topic.
+- Test all changes on ARM64 Termux.
+- Follow the existing project structure.
+- Submit a Pull Request with a clear description.
