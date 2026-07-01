@@ -1,7 +1,30 @@
+# Build
 build/
 out/
+generated/
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+compile_commands.json
+
+# Ninja
+.ninja_*
+build.ninja
+
+# Logs
+*.log
+
+# Temporary
+*.tmp
 *.o
 *.a
 *.so
-*.log
-*.tmp
+
+# OS
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
