@@ -11,8 +11,9 @@ The format is based on Keep a Changelog.
 - Native ARM64 build of Android AAPT2
 - Built entirely on Termux using Clang/LLVM
 - Android 15 compatibility verified
-- GitHub Release with prebuilt binary
-- Support for:
+- Initial GitHub release
+- Prebuilt ARM64 binary
+- Supported commands:
   - compile
   - link
   - dump
@@ -24,10 +25,14 @@ The format is based on Keep a Changelog.
 
 ### Tested
 
-- Decompiled and rebuilt GameSpace 16.0.4
-- APK signing with apksigner
+- APK decompile using APKTool 2.11.x
+- APK rebuild
+- APK signing using apksigner
+- Resource compilation
+- Resource linking
 - Resource dumping
-- Manifest parsing
+- AndroidManifest parsing
+- GameSpace 16.0.4 rebuild verification
 
 ### Notes
 
