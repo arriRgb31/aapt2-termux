@@ -11,6 +11,12 @@ This project provides a standalone ARM64 AAPT2 binary built natively on Android 
 
 ---
 
+Native ARM64 build of Android Asset Packaging Tool 2 (AAPT2) compiled entirely on Termux.
+
+AAPT2-Termux is a standalone ARM64 build of Android Asset Packaging Tool 2 (AAPT2), compiled natively on Android using the Termux environment. It enables APK resource compilation, linking, and inspection directly on ARM64 Android devices without requiring x86 emulation.
+
+---
+
 ## Features
 
 - Native ARM64 executable
@@ -195,3 +201,12 @@ See the [LICENSE](LICENSE) file for details.
 **Arii**
 
 GitHub: https://github.com/arriRgb31
+
+## Credits
+
+This project is based on components from:
+
+- Android Open Source Project (AOSP)
+- Google
+- Termux
+
