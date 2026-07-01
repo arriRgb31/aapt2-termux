@@ -166,12 +166,6 @@ if (res->staged_alias) {
 
 bool error = false;
 if (!res->name.entry.empty()) {
-
-  std::cerr
-      << "PARSER_RESOURCE "
-      << res->name.entry
-      << std::endl;
-
   if (!table->AddResource(res_builder.Build(), diag)) {
     return false;
   }

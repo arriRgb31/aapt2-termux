@@ -551,22 +551,12 @@ bool ResourceTable::AddResource(NewResource&& res, android::IDiagnostics* diag) 
   const bool validate = validation_ == Validation::kEnabled;
   const android::Source source = res.value ? res.value->GetSource() : android::Source{};
 
-  const bool valid_name = IsValidResourceEntryName(res.name.entry);
-
-  std::cerr
-      << "ADDRESOURCE "
-      << "validate=" << validate
-      << " allow_mangled=" << res.allow_mangled
-      << " entry=[" << res.name.entry << "]"
-      << " valid=" << valid_name
-      << std::endl;
+   const bool valid_name = IsValidResourceEntryName(res.name.entry);
 
 if (validate && !res.allow_mangled && !valid_name) {
-    std::cerr << "FAILED_RESOURCE: " << res.name.entry << std::endl;
-
-    diag->Error(android::DiagMessage(source)
-                << "resource '" << res.name
-                << "' has invalid entry name '" << res.name.entry);
+  diag->Error(android::DiagMessage(source)
+              << "resource '" << res.name
+              << "' has invalid entry name '" << res.name.entry);
     return false;
 }
 

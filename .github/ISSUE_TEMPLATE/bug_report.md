@@ -1,20 +1,58 @@
 ---
 name: Bug report
-about: Report a problem
-title: ''
+about: Report an issue
+title: ""
 labels: bug
 ---
 
-### Device
+## Device
 
-### Android Version
+Example:
 
-### Termux Version
+Realme C53
 
-### Steps to Reproduce
+---
 
-### Expected Behavior
+## Android Version
 
-### Actual Behavior
+Example:
 
-### Logs
+Android 15
+
+---
+
+## Termux Version
+
+Example:
+
+0.118
+
+---
+
+## Steps to Reproduce
+
+1.
+2.
+3.
+
+---
+
+## Expected Behavior
+
+Describe what should happen.
+
+---
+
+## Actual Behavior
+
+Describe what actually happened.
+
+---
+
+## Build Log
+
+Paste terminal output here.
+
+```
+log here
+```

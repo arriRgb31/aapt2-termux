@@ -28,3 +28,4 @@ build.ninja
 # Editor
 .vscode/
 .idea/
+test/

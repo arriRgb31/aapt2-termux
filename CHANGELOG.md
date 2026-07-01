@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-The format is based on Keep a Changelog.
+---
 
 ## [1.0.0] - 2026-07-01
 
@@ -33,7 +33,37 @@ The format is based on Keep a Changelog.
 - Resource dumping
 - AndroidManifest parsing
 - GameSpace 16.0.4 rebuild verification
+=======
+- Native ARM64 AAPT2 build
+- Built entirely on Termux
+- Clang/LLVM toolchain
+- Android 15 compatibility
+- GitHub repository
+- GitHub Release
+- Release binary
 
-### Notes
+### Supported Commands
+
+- compile
+- link
+- dump
+- optimize
+- convert
+- apkinfo
+- daemon
+- version
+- diff
+
+### Tested
+
+- APK resource compilation
+- APK resource linking
+- APK manifest parsing
+- Resource table dumping
+- APKTool decompile/rebuild
+- APK signing using apksigner
+>>>>>>> 4fa5c76 (Release v1.0.0)
+
+---
 
 Initial public release.

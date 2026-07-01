@@ -83,7 +83,7 @@ bool IsWhitespace(char32_t codepoint) {
 bool IsJavaIdentifier(StringPiece str) {
   Utf8Iterator iter(str);
 
-  // Check the first character.
+  // Check the first character
   if (!iter.HasNext()) {
     return false;
   }
@@ -103,12 +103,9 @@ bool IsJavaIdentifier(StringPiece str) {
 }
 
 bool IsValidResourceEntryName(StringPiece str) {
-  std::cerr << "CHECK: [" << str << "]" << std::endl;
-
   Utf8Iterator iter(str);
 
   if (!iter.HasNext()) {
-    std::cerr << "=> FALSE(empty)" << std::endl;
     return false;
   }
 
@@ -117,7 +114,6 @@ bool IsValidResourceEntryName(StringPiece str) {
   if (!IsXidStart(first_codepoint) &&
       first_codepoint != U'_' &&
       first_codepoint != U'$') {
-    std::cerr << "=> FALSE(first)" << std::endl;
     return false;
   }
 
@@ -128,12 +124,9 @@ bool IsValidResourceEntryName(StringPiece str) {
         codepoint != U'.' &&
         codepoint != U'-' &&
         codepoint != U'$') {
-      std::cerr << "=> FALSE(char)" << std::endl;
       return false;
     }
   }
-
-  std::cerr << "=> TRUE" << std::endl;
   return true;
 }
 
