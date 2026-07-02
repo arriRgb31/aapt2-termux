@@ -8,62 +8,38 @@ All notable changes to this project will be documented in this file.
 
 ### Added
 
-- Native ARM64 build of Android AAPT2
-- Built entirely on Termux using Clang/LLVM
-- Android 15 compatibility verified
-- Initial GitHub release
-- Prebuilt ARM64 binary
-- Supported commands:
-  - compile
-  - link
-  - dump
-  - optimize
-  - convert
-  - apkinfo
-  - daemon
-  - version
-
-### Tested
-
-- APK decompile using APKTool 2.11.x
-- APK rebuild
-- APK signing using apksigner
-- Resource compilation
-- Resource linking
-- Resource dumping
-- AndroidManifest parsing
-- GameSpace 16.0.4 rebuild verification
-=======
-- Native ARM64 AAPT2 build
-- Built entirely on Termux
-- Clang/LLVM toolchain
-- Android 15 compatibility
-- GitHub repository
-- GitHub Release
-- Release binary
+- Initial public release.
+- Native ARM64 build of Android Asset Packaging Tool 2 (AAPT2).
+- Built entirely on Android using the Termux environment.
+- Compiled with the Clang/LLVM toolchain.
+- Verified compatibility with Android 15.
+- Public GitHub repository.
+- GitHub Release with prebuilt ARM64 binary.
 
 ### Supported Commands
 
-- compile
-- link
-- dump
-- optimize
-- convert
-- apkinfo
-- daemon
-- version
-- diff
+- `compile`
+- `link`
+- `dump`
+- `diff`
+- `optimize`
+- `convert`
+- `daemon`
+- `version`
 
-### Tested
+### Validation
 
-- APK resource compilation
-- APK resource linking
-- APK manifest parsing
-- Resource table dumping
-- APKTool decompile/rebuild
-- APK signing using apksigner
->>>>>>> 4fa5c76 (Release v1.0.0)
+The initial release has been successfully validated for:
+
+- Resource compilation (`compile`)
+- Resource linking (`link`)
+- APK comparison (`diff`)
+- AndroidManifest parsing (`dump xmltree`)
+- Resource table dumping (`dump resources`)
+- APK package information (`dump badging`)
+- APK decompile and rebuild workflow using APKTool 2.11.x
+- APK signing using Android SDK Build Tools (`apksigner`)
 
 ---
 
-Initial public release.
+Initial stable public release.
