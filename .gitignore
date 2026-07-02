@@ -3,29 +3,61 @@ build/
 out/
 generated/
 
+# Test
+test/
+
 # CMake
 CMakeFiles/
 CMakeCache.txt
 cmake_install.cmake
 compile_commands.json
+Makefile
 
 # Ninja
 .ninja_*
 build.ninja
 
+# Object Files
+*.o
+*.obj
+
+# Static Libraries
+*.a
+*.lib
+
+# Shared Libraries
+*.so
+*.so.*
+*.dll
+*.dylib
+
+# Executables
+*.exe
+
+# Archives
+*.zip
+
+# APK Build Artifacts
+*.apk
+*.ap_
+*.flat
+
 # Logs
 *.log
 
-# Temporary
+# Temporary Files
 *.tmp
-*.o
-*.a
-*.so
+*.temp
+*.swp
+*~
 
 # OS
 .DS_Store
+Thumbs.db
 
-# Editor
+# Editors
 .vscode/
 .idea/
-test/
+
+# Local Environment
+.env
