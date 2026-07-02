@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.20)
 
-project(aapt2-termux)
+project(aapt2-termux LANGUAGES C CXX)
 
 include(cmake/CompilerFlags.cmake)
 include(cmake/Dependencies.cmake)
