@@ -29,7 +29,7 @@ target_include_directories(utils
 PUBLIC
     third_party/libutils/include
     third_party/libutils/binder/include
-    ${CMAKE_SOURCE_DIR}/../aosp-deps/core/libsystem/include
+    ${CMAKE_SOURCE_DIR}/third_party/libsystem/include
 )
 
 target_link_libraries(utils PUBLIC

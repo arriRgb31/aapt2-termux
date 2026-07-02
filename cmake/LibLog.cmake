@@ -25,7 +25,7 @@ PUBLIC
     third_party/libbase/include
     third_party/libcutils/include
     third_party/libutils/include
-    ${CMAKE_SOURCE_DIR}/../aosp-deps/core/libsystem/include
+    ${CMAKE_SOURCE_DIR}/third_party/libsystem/include
 )
 
 target_compile_definitions(log
