@@ -1,37 +1,46 @@
 # Contributing
 
-Thank you for your interest in contributing.
+Thank you for your interest in contributing to AAPT2-Termux.
 
-<<<<<<< HEAD
-Please follow these guidelines:
+Please follow these guidelines before submitting changes.
 
-- Open an Issue before making major changes.
-- Keep pull requests focused on a single topic.
+---
+
+## Before Submitting
+
 - Test all changes on ARM64 Termux.
-- Follow the existing project structure.
-- Submit a Pull Request with a clear description.
-=======
-## Before submitting
+- Keep commits focused on a single feature or fix.
+- Follow the existing project structure and coding style.
+- Open an Issue before making major changes.
 
-- Test on ARM64 Termux.
-- Keep commits focused.
-- Follow existing coding style.
+---
 
 ## Bug Reports
 
-Include:
+When reporting a bug, please include:
 
 - Android version
 - Termux version
 - Device model
-- Build log
-- Error message
 - Steps to reproduce
+- Expected behavior
+- Actual behavior
+- Build log or terminal output (if available)
+
+---
 
 ## Pull Requests
 
-Please:
+Please ensure that:
 
+- Each pull request addresses a single feature or fix.
+- The code has been tested before submission.
+- The pull request includes a clear description of the changes.
+- Documentation is updated when necessary.
+
+---
+
+Thank you for helping improve AAPT2-Termux.
 - Create one feature per pull request.
 - Write a clear description.
 - Test before submitting.
