@@ -18,6 +18,7 @@ This project adapts the Android Open Source Project (AOSP) AAPT2 source code to 
 - Clang/LLVM toolchain
 - Android 15 verified
 - No x86 emulation required
+- Self-contained source tree
 - Open source
 
 ---
@@ -52,14 +53,29 @@ This project adapts the Android Open Source Project (AOSP) AAPT2 source code to 
 
 ## Test Environment
 
-Validated using:
+Validated on:
 
 - Android 15
-- ARM64 device
+- ARM64 (AArch64)
 - Termux
 - Clang/LLVM
+- CMake
+- Ninja
+- Android SDK (`android.jar`)
 - APKTool 2.11.x
 - Android SDK Build Tools (`apksigner`)
+
+The following AAPT2 commands have been verified successfully:
+
+- compile
+- link
+- dump badging
+- dump xmltree
+- apkinfo
+- optimize
+- convert
+- diff
+- version
 
 ---
 
@@ -170,7 +186,15 @@ git clone https://github.com/arriRgb31/aapt2-termux.git
 cd aapt2-termux
 ```
 
-Build the project.
+Install the required packages.
+
+```sh
+pkg update
+pkg install clang cmake ninja git \
+protobuf fmt libpng libexpat zlib
+```
+
+Build AAPT2.
 
 ```sh
 ./build.sh
@@ -181,8 +205,6 @@ The resulting executable will be generated at:
 ```text
 build/aapt2
 ```
-
----
 
 ## Validation
 
@@ -201,17 +223,17 @@ The current release has been verified for:
 
 ## Project Status
 
-**Stable**
+Stable
 
-Version **1.0.0** is the initial stable public release.
+Version 1.0.0 is the first stable standalone release.
 
-Future releases will focus on compatibility improvements, upstream synchronization with AOSP, maintenance, and bug fixes.
+The project no longer depends on an external AOSP source tree and can be built directly from this repository.
 
 ---
 
 ## Releases
 
-Download the latest release from:
+Prebuilt ARM64 binaries are available on the GitHub Releases page:
 
 https://github.com/arriRgb31/aapt2-termux/releases
 
@@ -219,7 +241,9 @@ https://github.com/arriRgb31/aapt2-termux/releases
 
 ## Upstream
 
-This project is based on the **Android Open Source Project (AOSP)** implementation of **AAPT2** and adapted to build natively for ARM64 devices running Termux.
+This project is based on the **Android Open Source Project (AOSP)** implementation of **AAPT2**.
+
+The source tree has been adapted into a self-contained project that can be built natively inside **Termux** without requiring a separate AOSP checkout.
 
 ---
 
@@ -248,8 +272,3 @@ This project is built upon software and technologies provided by:
 - Android Open Source Project (AOSP)
 - Google
 - Termux
-
-Validation performed using:
-
-- APKTool 2.11.x
-- Android SDK Build Tools (`apksigner`)
