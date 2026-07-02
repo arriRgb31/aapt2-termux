@@ -196,7 +196,6 @@ The current release has been verified for:
 - APK package information (`dump badging`)
 - APK decompile and rebuild workflow using APKTool 2.11.x
 - APK signing using Android SDK Build Tools (`apksigner`)
-- GameSpace 16.0.4 rebuild verification
 
 ---
 
