@@ -41,7 +41,3 @@ Please ensure that:
 ---
 
 Thank you for helping improve AAPT2-Termux.
-- Create one feature per pull request.
-- Write a clear description.
-- Test before submitting.
->>>>>>> 4fa5c76 (Release v1.0.0)

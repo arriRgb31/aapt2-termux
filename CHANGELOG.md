@@ -4,6 +4,37 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [1.0.1] - 2026-07-02
+
+### Changed
+
+- Removed dependency on a separate AOSP checkout.
+- Bundled required `libsystem` headers into the repository.
+- Repository is now fully self-contained.
+- Automatically generates required build version sources during the build process.
+- Updated build scripts and CMake configuration.
+- Improved native build workflow for Termux.
+- Updated project documentation.
+
+### Validation
+
+Validated on:
+
+- Android 15 (ARM64)
+- Native Termux build
+- Fresh `git clone`
+- Resource compilation (`compile`)
+- Resource linking (`link`)
+- APK comparison (`diff`)
+- AndroidManifest parsing (`dump xmltree`)
+- Resource table dumping (`dump resources`)
+- APK package information (`dump badging`)
+- APK information (`apkinfo`)
+- APK optimization (`optimize`)
+- APK conversion (`convert`)
+
+---
+
 ## [1.0.0] - 2026-07-01
 
 ### Added
@@ -29,7 +60,7 @@ All notable changes to this project will be documented in this file.
 
 ### Validation
 
-The initial release has been successfully validated for:
+Validated on:
 
 - Resource compilation (`compile`)
 - Resource linking (`link`)
@@ -39,7 +70,3 @@ The initial release has been successfully validated for:
 - APK package information (`dump badging`)
 - APK decompile and rebuild workflow using APKTool 2.11.x
 - APK signing using Android SDK Build Tools (`apksigner`)
-
----
-
-Initial stable public release.
