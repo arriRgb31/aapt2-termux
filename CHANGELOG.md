@@ -4,16 +4,19 @@ All notable changes to this project will be documented in this file.
 
 ---
 
-## [1.0.1] - 2026-07-02
+## [1.0.1] - 2026-07-03
 
 ### Changed
 
+- Updated to the latest project HEAD.
 - Removed dependency on a separate AOSP checkout.
 - Bundled required `libsystem` headers into the repository.
 - Repository is now fully self-contained.
 - Automatically generates required build version sources during the build process.
-- Updated build scripts and CMake configuration.
-- Improved native build workflow for Termux.
+- Updated CMake configuration and native build scripts.
+- Improved native ARM64 build workflow for Termux.
+- Removed unintended attribute debug logging from `ResourceUtils.cpp`.
+- Cleaned release binary for normal production use.
 - Updated project documentation.
 
 ### Validation
@@ -23,6 +26,7 @@ Validated on:
 - Android 15 (ARM64)
 - Native Termux build
 - Fresh `git clone`
+- Binary rebuilt from source
 - Resource compilation (`compile`)
 - Resource linking (`link`)
 - APK comparison (`diff`)
@@ -68,5 +72,4 @@ Validated on:
 - AndroidManifest parsing (`dump xmltree`)
 - Resource table dumping (`dump resources`)
 - APK package information (`dump badging`)
-- APK decompile and rebuild workflow using APKTool 2.11.x
-- APK signing using Android SDK Build Tools (`apksigner`)
+- APK decompile and rebuild workflow using APK
