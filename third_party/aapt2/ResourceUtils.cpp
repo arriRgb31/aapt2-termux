@@ -231,12 +231,6 @@ bool ParseAttributeReference(StringPiece str,
       return false;
     }
 
-   fprintf(stderr,
-        "ATTR package='%.*s' type='%.*s' entry='%.*s'\n",
-        (int)package.size(), package.data(),
-        (int)type.size(), type.data(),
-        (int)entry.size(), entry.data());
-
     if (!type.empty() && type != "attr") {
       return false;
     }
