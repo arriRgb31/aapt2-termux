@@ -16,10 +16,10 @@ This project adapts the Android Open Source Project (AOSP) implementation of AAP
 - Native ARM64 executable
 - Self-contained repository
 - Built entirely inside Termux
-- Based on the latest AOSP AAPT2 source
+- Based on the Android Open Source Project        (AOSP) implementation of AAPT2.
 - Clang/LLVM toolchain
 - CMake + Ninja build system
-- Automatic generation of required build sources
+- Automatic generation of version sources
 - Automatic protobuf code generation
 
 ---
@@ -116,6 +116,8 @@ Verify:
 
 ```sh
 aapt2 version
+which aapt2
+aapt2 version
 ```
 
 ---
@@ -174,6 +176,7 @@ patches/
 release/
 scripts/
 third_party/
+    Bundled AOSP components
 ```
 
 ---
@@ -206,7 +209,6 @@ See [LICENSE](LICENSE).
 - Google
 - Termux
 - APKTool
-- Android SDK Build Tools
 
 ---
 
