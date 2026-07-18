@@ -40,11 +40,13 @@ This project adapts the Android Open Source Project (AOSP) implementation of AAP
 
 ## Validation
 
-The current release has been built and validated on:
+The current release has been built and 
+Validated with:
 
 - Android 15
 - ARM64
 - Native Termux
+- Apktool CLI 2.11.1
 
 Verified commands:
 
@@ -109,13 +111,12 @@ chmod +x aapt2
 Install:
 
 ```sh
-mv aapt2 $PREFIX/bin/
+install -m755 aapt2 $PREFIX/bin/
 ```
 
 Verify:
 
 ```sh
-aapt2 version
 which aapt2
 aapt2 version
 ```
@@ -166,17 +167,16 @@ build/aapt2
 ## Repository Layout
 
 ```text
-build.sh
-clean.sh
-CMakeLists.txt
+build.sh          Main build script
+clean.sh          Remove build artifacts
+CMakeLists.txt    CMake project configuration
 
-cmake/
-generated/
-patches/
-release/
-scripts/
-third_party/
-    Bundled AOSP components
+cmake/            CMake modules and build configuration
+generated/        Auto-generated version sources
+patches/          Source patches applied during integration
+release/          Release packaging assets
+scripts/          Helper build scripts
+third_party/      Bundled AOSP libraries and AAPT2 sources
 ```
 
 ---
