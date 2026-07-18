@@ -16,7 +16,7 @@ This project adapts the Android Open Source Project (AOSP) implementation of AAP
 - Native ARM64 executable
 - Self-contained repository
 - Built entirely inside Termux
-- Based on the Android Open Source Project        (AOSP) implementation of AAPT2.
+- Based on the Android Open Source Project (AOSP) implementation of AAPT2
 - Clang/LLVM toolchain
 - CMake + Ninja build system
 - Automatic generation of version sources
@@ -40,8 +40,7 @@ This project adapts the Android Open Source Project (AOSP) implementation of AAP
 
 ## Validation
 
-The current release has been built and 
-Validated with:
+The current release has been built and validated with:
 
 - Android 15
 - ARM64
@@ -92,9 +91,8 @@ zlib
 
 ## Installation
 
-Download the latest release:
-
-https://github.com/arriRgb31/aapt2-termux/releases
+Download the latest release from the
+[Releases](https://github.com/arriRgb31/aapt2-termux/releases) page.
 
 Extract the archive:
 
@@ -167,16 +165,16 @@ build/aapt2
 ## Repository Layout
 
 ```text
-build.sh          Main build script
-clean.sh          Remove build artifacts
-CMakeLists.txt    CMake project configuration
-
-cmake/            CMake modules and build configuration
-generated/        Auto-generated version sources
-patches/          Source patches applied during integration
-release/          Release packaging assets
-scripts/          Helper build scripts
-third_party/      Bundled AOSP libraries and AAPT2 sources
+.
+├── build.sh              Main build script
+├── clean.sh              Remove build artifacts
+├── CMakeLists.txt        CMake project configuration
+├── cmake/                CMake modules and build configuration
+├── generated/            Auto-generated version sources
+├── patches/              Source patches applied during integration
+├── release/              Release packaging assets
+├── scripts/              Helper build scripts
+└── third_party/          Bundled AOSP libraries and AAPT2 sources
 ```
 
 ---
@@ -211,9 +209,8 @@ See [LICENSE](LICENSE).
 - APKTool
 
 ---
-
 ## Author
 
-**Arii**
+Arii
 
-https://github.com/arriRgb31
+GitHub: https://github.com/arriRgb31
